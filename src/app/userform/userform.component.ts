@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../User';
 
 @Component({
   selector: 'app-userform',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserformComponent implements OnInit {
   title:string = "Userform";
-  firstname="ram";
+  userArray:User[]=[];
+  user:User = new User();
+
 
   constructor() { }
   save(){
-    console.log(this.firstname);
+    this.userArray.push(Object.assign({} ,this.user));
+    console.log(this.user.firstname);
     console.log("working...");
-    this.firstname="john";
+    //this.user.firstname="john";
   }
 
   ngOnInit(): void {

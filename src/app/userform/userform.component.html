@@ -1,4 +1,20 @@
 <h1>{{title}}</h1>
 <p>userform works!</p>
-<input [(ngModel)]="firstname">
+<input [(ngModel)]="user.firstname">
+<input [(ngModel)]="user.age" placeholder="age" type="number">
+
+
 <button (click)='save()'>Save</button>
+<table>
+  <thead>
+    <td>Firstname</td>
+    <td>Age</td>
+  </thead>
+  <tbody>
+    <tr *ngFor ='let user of userArray'>
+      <td>{{user.firstname}}</td>
+      <td>{{user.age}}</td>
+
+      </tr>
+  </tbody>
+</table>
