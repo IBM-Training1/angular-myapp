@@ -1,4 +1,5 @@
 export class User{
-  firstname:String = "ram";
+  name:String = "ram";
   age:number = 45;
+  dob:Date = new Date();
 }

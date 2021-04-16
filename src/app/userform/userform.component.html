@@ -1,7 +1,8 @@
 <h1>{{title}}</h1>
 <p>userform works!</p>
-<input [(ngModel)]="user.firstname">
+<input [(ngModel)]="user.name">
 <input [(ngModel)]="user.age" placeholder="age" type="number">
+<input type="date" [(ngModel)] = 'user.dob'>
 
 
 <button (click)='save()'>Save</button>
@@ -9,11 +10,14 @@
   <thead>
     <td>Firstname</td>
     <td>Age</td>
+    <td>Dob</td>
+
   </thead>
   <tbody>
     <tr *ngFor ='let user of userArray'>
-      <td>{{user.firstname}}</td>
+      <td>{{user.name}}</td>
       <td>{{user.age}}</td>
+      <td>{{user.dob}}</td>
 
       </tr>
   </tbody>
