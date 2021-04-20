@@ -1,5 +1,6 @@
-export class User{
-  name:String = "ram";
-  age:number = 45;
-  dob:Date = new Date();
+export class User {
+  id: any = -1;
+  name: string = 'Ram';
+  age: number = 0;
+  dob: Date = new Date();
 }

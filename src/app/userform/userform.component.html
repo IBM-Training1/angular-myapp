@@ -14,11 +14,11 @@
 
   </thead>
   <tbody>
-    <tr *ngFor ='let user of userArray'>
-      <td>{{user.name}}</td>
-      <td>{{user.age}}</td>
-      <td>{{user.dob}}</td>
-
-      </tr>
+    <tr *ngFor='let user of userArray; index as i'>
+      <td><a [href]='user.name'>{{user.name}}</a></td>
+      <td >{{user.age}}</td>
+      <td>{{user.dob | date: 'M/d/yy'}}</td>
+      <td><button (click)='this.deleteUser(user.id, i)'>X</button></td>
+    </tr>
   </tbody>
 </table>
